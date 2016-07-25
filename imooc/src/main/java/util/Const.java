@@ -3,7 +3,7 @@
 // Decompiler options: packimports(3) 
 // Source File Name:   Const.java
 
-package com;
+package util;
 
 
 public class Const

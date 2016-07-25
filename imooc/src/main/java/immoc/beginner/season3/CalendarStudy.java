@@ -1,4 +1,4 @@
-package beginner.season3;
+package immoc.beginner.season3;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

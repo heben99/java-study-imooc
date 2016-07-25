@@ -3,7 +3,7 @@
 // Decompiler options: packimports(3) 
 // Source File Name:   ConfigVar.java
 
-package com;
+package util;
 
 
 // Referenced classes of package com:
@@ -36,8 +36,6 @@ public class ConfigVar
 
     public static void main(String args[])
     {
-        int i = 0;
-        i++;
     }
 
     public static String http;

@@ -3,10 +3,9 @@
 // Decompiler options: packimports(3) 
 // Source File Name:   FileTest.java
 
-package com;
+package util;
 
 import java.io.File;
-import java.io.PrintStream;
 
 public class FileTest
 {

@@ -3,7 +3,7 @@
 // Decompiler options: packimports(3) 
 // Source File Name:   StringManager.java
 
-package com;
+package util;
 
 
 // Referenced classes of package com:

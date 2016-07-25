@@ -3,7 +3,7 @@
 // Decompiler options: packimports(3) 
 // Source File Name:   FileManager.java
 
-package com;
+package util;
 
 import java.io.*;
 

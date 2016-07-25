@@ -3,7 +3,7 @@
 // Decompiler options: packimports(3) 
 // Source File Name:   myURL.java
 
-package com;
+package util;
 
 import java.io.*;
 import java.net.HttpURLConnection;

@@ -1,4 +1,4 @@
-package com;
+package util;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -33,7 +33,6 @@ public class RSAManager {
 			kp = new JcaPEMKeyConverter().getKeyPair(pemKeyPair);
 			pp.close();
 		} catch (Exception e) {
-			// TODO: handle exception
 			Debug.print("getKeyFromPemFile error");
 		}
     	return kp;
@@ -65,7 +64,6 @@ public class RSAManager {
 			}
 	    	return converter.getPublicKey(kp);
 		} catch (Exception e) {
-			// TODO: handle exception
 			Debug.print("getPubkey error");
 			return null;
 		}
@@ -120,7 +118,6 @@ public class RSAManager {
 			byte[] signature = rsa.sign();
 			return Base64.encodeBase64URLSafeString(signature);
 		} catch (Exception e) {
-			// TODO: handle exception
 			return "SHA1withRSA error";
 		} 
 	}
@@ -141,8 +138,6 @@ public class RSAManager {
 			msg = Base64.encodeBase64URLSafeString(signature);
 			return msg;
 		} catch (Exception e) {
-			// TODO: handle exception
-			
 			return "SHA1_SHA1withRSA_Base64 error!";
 		} 
 	}

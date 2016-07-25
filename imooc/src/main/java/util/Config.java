@@ -3,7 +3,7 @@
 // Decompiler options: packimports(3) 
 // Source File Name:   Config.java
 
-package com;
+package util;
 
 import java.io.*;
 import java.util.Properties;

@@ -3,7 +3,7 @@
 // Decompiler options: packimports(3) 
 // Source File Name:   Debug.java
 
-package com;
+package util;
 
 
 public class Debug

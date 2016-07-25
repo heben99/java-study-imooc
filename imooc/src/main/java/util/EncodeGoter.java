@@ -3,11 +3,10 @@
 // Decompiler options: packimports(3) 
 // Source File Name:   EncodeGoter.java
 
-package com;
+package util;
 
 import java.io.*;
 import java.net.URL;
-import java.net.URLConnection;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -69,7 +68,7 @@ public class EncodeGoter
     public static void main(String args[])
         throws Exception
     {
-        List list = new LinkedList();
+        List<String> list = new LinkedList<String>();
         list.add("http://baidu.com/");
         list.add("http://army.news.tom.com/");
         list.add("http://slides.army.tom.com/vw/163740-1.html#picchange");
@@ -84,7 +83,7 @@ public class EncodeGoter
         list.add("http://www.chinahr.com/index.htm");
         list.add("http://www.ccb.com/cn/home/index.html");
         list.add("http://eladies.sina.com.cn/");
-        for(Iterator iterator = list.iterator(); iterator.hasNext();)
+        for(Iterator<String> iterator = list.iterator(); iterator.hasNext();)
         {
             String string = (String)iterator.next();
             System.out.print(string);
