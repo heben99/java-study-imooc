@@ -1,4 +1,4 @@
-package jikexueyuan.mybatis.model.hello;
+package jikexueyuan.mybatis.model.inter;
 
 import java.io.Reader;
 
@@ -26,7 +26,8 @@ public class Test {
 	public static void main(String[] args) {
 		SqlSession session = sqlSessionFactory.openSession();
 		try {
-			User user = (User) session.selectOne("jikexueyuan.mybatis.model.UserMapper.selectUserByID", 1);
+			IUserOperation userOper = session.getMapper(IUserOperation.class);
+			User user = userOper.selectUserByID(1);
 			System.out.println(user.getUserName());
 			System.out.println(user.getUserAddress());
 		} finally {

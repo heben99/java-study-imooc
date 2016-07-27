@@ -7,22 +7,30 @@ package util;
 
 import java.io.File;
 
-public class FileTest
+public class PathManager
 {
 
-    public FileTest()
+    public PathManager()
     {
     }
 
+    public static String getDirClasspath(Class<?> c)
+    {
+    	return c.getPackage().getName().replace('.', '/');
+    }
+    
     public static void main(String args[])
         throws Exception
     {
         System.out.println(Thread.currentThread().getContextClassLoader().getResource(""));
-        System.out.println(Thread.currentThread().getContextClassLoader().getResource(""));
+        System.out.println(Thread.currentThread().getContextClassLoader().getResource("./"));
         System.out.println(ClassLoader.getSystemResource(""));
-//        System.out.println(ClassLoader.getResource(""));
-//        System.out.println(ClassLoader.getResource("/"));
         System.out.println((new File("/")).getAbsolutePath());
+        System.out.println((new File("./")).getAbsolutePath());
         System.out.println(System.getProperty("user.dir"));
+        System.out.println(PathManager.class.getCanonicalName());
+        System.out.println(PathManager.class.getSimpleName());
+        System.out.println(getDirClasspath(PathManager.class));
     }
+
 }

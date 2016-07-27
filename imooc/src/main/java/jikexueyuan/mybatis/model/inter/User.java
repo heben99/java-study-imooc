@@ -1,4 +1,4 @@
-package jikexueyuan.mybatis.model.hello;
+package jikexueyuan.mybatis.model.inter;
 
 public class User {
 
