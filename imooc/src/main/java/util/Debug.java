@@ -5,15 +5,14 @@
 
 package util;
 
+public class Debug {
+	private Debug() {
+	};
 
-public class Debug
-{
-	private Debug(){};
+	public static void print(String s1) {
+		if (isDebug)
+			System.out.println(s1);
+	}
 
-    public static void print(String s1)
-    {
-    	if (isDebug) System.out.println(s1);
-    }
-
-    static final boolean isDebug = true;
+	static final boolean isDebug = true;
 }

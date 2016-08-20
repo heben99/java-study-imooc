@@ -14,7 +14,7 @@ public class Test {
 
 	private static SqlSessionFactory sqlSessionFactory;
 	private static Reader reader;
-	
+
 	static {
 		try {
 			reader = Resources.getResourceAsReader(PathManager.getDirClasspath(Test.class) + "/Configuration.xml");
@@ -23,33 +23,29 @@ public class Test {
 			e.printStackTrace();
 		}
 	}
-	
-	public void getUserList(String userName)
-	{
+
+	public void getUserList(String userName) {
 		SqlSession session = sqlSessionFactory.openSession();
 		try {
 			IUserOperation userOperation = session.getMapper(IUserOperation.class);
 			List<User> users = userOperation.selectUsers(userName);
 			session.commit();
-			for(User u: users) {
-				System.out.println(u.getId() + ", " +
-						u.getUserName() + ", " +
-						u.getUserAddress() + ", " + 
-						u.getUserAge());
+			for (User u : users) {
+				System.out.println(
+						u.getId() + ", " + u.getUserName() + ", " + u.getUserAddress() + ", " + u.getUserAge());
 			}
 			System.out.println();
 		} finally {
 			session.close();
 		}
 	}
-	
-	public void addUser()
-	{
+
+	public void addUser() {
 		User user = new User();
 		user.setUserName("陆小凤");
 		user.setUserAddress("紫禁之巅");
 		user.setUserAge(30);
-		
+
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		try {
 			IUserOperation userOperation = sqlSession.getMapper(IUserOperation.class);
@@ -59,9 +55,8 @@ public class Test {
 			sqlSession.close();
 		}
 	}
-	
-	public void deleteUser(int id)
-	{
+
+	public void deleteUser(int id) {
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		try {
 			IUserOperation userOperation = sqlSession.getMapper(IUserOperation.class);
@@ -71,15 +66,14 @@ public class Test {
 			sqlSession.close();
 		}
 	}
-	
-	public void updateUser(int id)
-	{
+
+	public void updateUser(int id) {
 		User user = new User();
 		user.setId(id);
 		user.setUserAddress("呼和浩特-已更新");
 		user.setUserAge(18);
 		user.setUserName("尼奥-已更新");
-		
+
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		try {
 			IUserOperation userOperation = sqlSession.getMapper(IUserOperation.class);
@@ -89,21 +83,21 @@ public class Test {
 			sqlSession.close();
 		}
 	}
-	
+
 	public static void main(String[] args) {
 		Test test = new Test();
 		test.getUserList("%");
-		
+
 		test.addUser();
-		
+
 		test.getUserList("%");
-		
+
 		test.updateUser(2);
-		
+
 		test.getUserList("%");
-		
+
 		test.deleteUser(2);
-		
+
 		test.getUserList("%");
 	}
 }

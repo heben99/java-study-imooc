@@ -11,47 +11,40 @@ import java.util.Properties;
 // Referenced classes of package com:
 //            Const
 
-public class Config
-{
+public class Config {
 
-    public Config()
-    {
-    }
+	public Config() {
+	}
 
-    public static void init(String path)
-        throws Exception
-    {
-        if(p != null && !filePath.isEmpty() && path.equals(filePath))
-            return;
-        filePath = path;
-        if(r != null)
-            r.close();
-        if(p != null)
-            p.clear();
-        if(is != null)
-            is.close();
-        is = new FileInputStream(filePath);
-        r = new InputStreamReader(is, Const.charset);
-        p = new Properties();
-        p.load(r);
-    }
+	public static void init(String path) throws Exception {
+		if (p != null && !filePath.isEmpty() && path.equals(filePath))
+			return;
+		filePath = path;
+		if (r != null)
+			r.close();
+		if (p != null)
+			p.clear();
+		if (is != null)
+			is.close();
+		is = new FileInputStream(filePath);
+		r = new InputStreamReader(is, Const.charset);
+		p = new Properties();
+		p.load(r);
+	}
 
-    public static String getString(String key)
-    {
-        if(key == null || key.equals("") || key.equals("null"))
-        {
-            return "";
-        } else
-        {
-            String result = "";
-            result = p.getProperty(key);
-            return result;
-        }
-    }
+	public static String getString(String key) {
+		if (key == null || key.equals("") || key.equals("null")) {
+			return "";
+		} else {
+			String result = "";
+			result = p.getProperty(key);
+			return result;
+		}
+	}
 
-    private static InputStream is = null;
-    private static Properties p = null;
-    private static InputStreamReader r = null;
-    private static String filePath = "";
+	private static InputStream is = null;
+	private static Properties p = null;
+	private static InputStreamReader r = null;
+	private static String filePath = "";
 
 }

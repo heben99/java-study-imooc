@@ -5,44 +5,37 @@
 
 package util;
 
-
 // Referenced classes of package com:
 //            Config, Const
 
-public class ConfigVar
-{
+public class ConfigVar {
 
-    public ConfigVar()
-    {
-    }
+	public ConfigVar() {
+	}
 
-    public static void init(String path)
-        throws Exception
-    {
-        Config.init(path);
-        http = "http";
-        expect = Config.getString(Const.expect);
-        remote = Config.getString(Const.remote);
-        kinds = Integer.parseInt(Config.getString(Const.tradeKinds));
-        trade = new String[kinds];
-        file = new String[kinds];
-        for(int i = 0; i < kinds; i++)
-        {
-            trade[i] = Config.getString((new StringBuilder(String.valueOf(Const.tradeName))).append(i).toString());
-            file[i] = Config.getString((new StringBuilder(String.valueOf(Const.fileName))).append(i).toString());
-        }
+	public static void init(String path) throws Exception {
+		Config.init(path);
+		http = "http";
+		expect = Config.getString(Const.expect);
+		remote = Config.getString(Const.remote);
+		kinds = Integer.parseInt(Config.getString(Const.tradeKinds));
+		trade = new String[kinds];
+		file = new String[kinds];
+		for (int i = 0; i < kinds; i++) {
+			trade[i] = Config.getString((new StringBuilder(String.valueOf(Const.tradeName))).append(i).toString());
+			file[i] = Config.getString((new StringBuilder(String.valueOf(Const.fileName))).append(i).toString());
+		}
 
-    }
+	}
 
-    public static void main(String args[])
-    {
-    }
+	public static void main(String args[]) {
+	}
 
-    public static String http;
-    public static String expect;
-    public static String remote;
-    public static String trade[];
-    public static String file[];
-    public static int kinds = 0;
+	public static String http;
+	public static String expect;
+	public static String remote;
+	public static String trade[];
+	public static String file[];
+	public static int kinds = 0;
 
 }

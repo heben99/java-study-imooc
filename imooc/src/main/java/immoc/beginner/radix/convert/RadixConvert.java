@@ -16,8 +16,8 @@ public class RadixConvert {
 		//“Ï≥£¥¶¿Ì
 		try {
 			System.out.println(Integer.valueOf("FFF",2));
-		} catch (Exception e) {
-			e.printStackTrace();
+		} catch (NumberFormatException e) {
+			System.out.println("NumberFormatException occured when radix convert:" + e.getMessage());
 		}
 	}
 }

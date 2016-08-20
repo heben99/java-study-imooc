@@ -5,22 +5,19 @@
 
 package util;
 
+public class Const {
 
-public class Const
-{
+	public Const() {
+	}
 
-    public Const()
-    {
-    }
-
-    public static String dir = "";
-    public static String http = "httpDir";
-    public static String expect = "expect";
-    public static String remote = "remote";
-    public static String tradeKinds = "tradeKinds";
-    public static String tradeName = "t";
-    public static String fileName = "file";
-    public static String charset = "utf-8";
-    public static String test = "ok";
+	public static String dir = "";
+	public static String http = "httpDir";
+	public static String expect = "expect";
+	public static String remote = "remote";
+	public static String tradeKinds = "tradeKinds";
+	public static String tradeName = "t";
+	public static String fileName = "file";
+	public static String charset = "utf-8";
+	public static String test = "ok";
 
 }

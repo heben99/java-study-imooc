@@ -13,7 +13,7 @@ public class Test {
 
 	private static SqlSessionFactory sqlSessionFactory;
 	private static Reader reader;
-	
+
 	static {
 		try {
 			reader = Resources.getResourceAsReader(PathManager.getDirClasspath(Test.class) + "/Configuration.xml");
@@ -22,7 +22,7 @@ public class Test {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static void main(String[] args) {
 		SqlSession session = sqlSessionFactory.openSession();
 		try {
@@ -32,6 +32,6 @@ public class Test {
 		} finally {
 			session.close();
 		}
-		
+
 	}
 }
