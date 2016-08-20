@@ -1,9 +1,8 @@
+<%@page import="com.google.code.kaptcha.Constants"%>
 <%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=gbk"
 	pageEncoding="gbk"%>
 <%
-	// 127.0.0.1/immoc/util/checkcode/kaptcha/index.jsp
-
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
@@ -15,13 +14,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=gbk">
 <title>kaptcha验证码</title>
 </head>
+<%
+String k = (String) session.getAttribute(Constants.KAPTCHA_SESSION_KEY);
+String str = request.getParameter("userInputCode");
+if (k.equalsIgnoreCase(str)) {
+	out.println("验证码输入正确");
+} else {
+	out.println("验证码输入错误");
+}
+%>
 <body>
-	<form action="check.jsp">
-		<img alt="" src="/immoc/util/checkcode/kaptcha/randomcode.jpg">
-		<input type="text" name="userInputCode"  />
-		<input type="submit" />
-	</form>
-	
-
 </body>
 </html>
