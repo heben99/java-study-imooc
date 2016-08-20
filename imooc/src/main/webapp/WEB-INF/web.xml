@@ -34,6 +34,24 @@
 		<url-pattern>/immoc/util/checkcode/kaptcha/randomcode.jpg</url-pattern>
 	</servlet-mapping>
 
+	<!-- 127.0.0.1/immoc/util/checkcode/kaptcha/chinese/index.jsp -->
+	<servlet>
+		<servlet-name>kaptchaChinese</servlet-name>
+		<servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>
+		<init-param>
+			<param-name>kaptcha.textproducer.font.names</param-name>
+			<param-value>宋体</param-value>
+		</init-param>
+		<init-param>
+			<param-name>kaptcha.textproducer.impl</param-name>
+			<param-value>imooc.util.checkcode.kaptcha.chinese.ChineseText</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>kaptchaChinese</servlet-name>
+		<url-pattern>/immoc/util/checkcode/kaptcha/chinese/randomcode.jpg</url-pattern>
+	</servlet-mapping>
+
 
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
