@@ -1,6 +1,6 @@
 <%@page import="java.util.Date"%>
-<%@ page language="java" contentType="text/html; charset=gbk"
-	pageEncoding="gbk"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%
 	// 127.0.0.1/imooc.util.checkcode/index.jsp
 
@@ -12,8 +12,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gbk">
-<title>ÑéÖ¤Âë</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>éªŒè¯ç </title>
 <script type="text/javascript">
 	function reloadCode(){
 		var time = new Date().getTime();
@@ -26,11 +26,11 @@
 <body>
 	<form action="<%=request.getContextPath()%>/servlet/LoginServlet"
 		method="get">
-		ÑéÖ¤Âë: <input type="text" name="checkcode" /> <img alt="ÑéÖ¤Âë"
+		éªŒè¯ç : <input type="text" name="checkcode" /> <img alt="éªŒè¯ç "
 			id="imagecode"
 			src="<%=request.getContextPath()%>/servlet/ImageServlet" /> <a
-			href="javascript: reloadCode();">¿´²»Çå³ş</a> <br> <input
-			type="submit" value="Ìá½»" />
+			href="javascript: reloadCode();">çœ‹ä¸æ¸…æ¥š</a> <br> <input
+			type="submit" value="æäº¤" />
 	</form>
 
 </body>

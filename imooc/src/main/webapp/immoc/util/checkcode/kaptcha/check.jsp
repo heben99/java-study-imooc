@@ -1,7 +1,7 @@
 <%@page import="com.google.code.kaptcha.Constants"%>
 <%@page import="java.util.Date"%>
-<%@ page language="java" contentType="text/html; charset=gbk"
-	pageEncoding="gbk"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
@@ -11,16 +11,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gbk">
-<title>kaptchaÑéÖ¤Âë</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>kaptchaéªŒè¯ç </title>
 </head>
 <%
 String k = (String) session.getAttribute(Constants.KAPTCHA_SESSION_KEY);
 String str = request.getParameter("userInputCode");
+boolean debug = true;
+if(debug) {
+	out.println("userInputCode=" + str);
+	out.println("sessionKey=" + k);
+}
 if (k.equalsIgnoreCase(str)) {
-	out.println("ÑéÖ¤ÂëÊäÈëÕıÈ·");
+	out.println("éªŒè¯ç è¾“å…¥æ­£ç¡®");
 } else {
-	out.println("ÑéÖ¤ÂëÊäÈë´íÎó");
+	out.println("éªŒè¯ç è¾“å…¥é”™è¯¯");
 }
 %>
 <body>

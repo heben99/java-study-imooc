@@ -52,6 +52,25 @@
 		<url-pattern>/immoc/util/checkcode/kaptcha/chinese/randomcode.jpg</url-pattern>
 	</servlet-mapping>
 
+	<!-- 127.0.0.1/immoc/util/checkcode/kaptcha/arithmatic/index.jsp -->
+	<servlet>
+		<servlet-name>kaptchaArithmatic</servlet-name>
+		<servlet-class>imooc.util.checkcode.kaptcha.arithmatic.ArithmaticKaptchaServlet</servlet-class>
+		<init-param>
+			<param-name>kaptcha.textproducer.char.length</param-name>
+			<param-value>2</param-value>
+		</init-param>
+		<init-param>
+			<description>文本集合，验证码值从此集合中获取</description>
+			<param-name>kaptcha.textproducer.char.string</param-name>
+			<param-value>1234567890</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>kaptchaArithmatic</servlet-name>
+		<url-pattern>/immoc/util/checkcode/kaptcha/arithmatic/randomcode.jpg</url-pattern>
+	</servlet-mapping>
+
 
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>

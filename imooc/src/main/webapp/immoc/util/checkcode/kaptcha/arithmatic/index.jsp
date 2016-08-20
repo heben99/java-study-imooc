@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>kaptcha中文验证码</title>
+<title>算数表达式验证码</title>
 </head>
 <body>
 	<form action="/immoc/util/checkcode/kaptcha/check.jsp">
-		<img alt="" src="/immoc/util/checkcode/kaptcha/chinese/randomcode.jpg">
+		<img alt="" src="/immoc/util/checkcode/kaptcha/arithmatic/randomcode.jpg">
 		<input type="text" name="userInputCode"  />
 		<input type="submit" />
 	</form>
