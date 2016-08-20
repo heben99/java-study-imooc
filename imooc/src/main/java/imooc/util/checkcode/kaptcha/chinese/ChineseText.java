@@ -46,7 +46,6 @@ public class ChineseText extends Configurable implements TextProducer {
 			String ch = base.charAt(new Random().nextInt(base.length())) + "";
 			sb.append(ch);
 		}
-		System.out.println("getRandomChinese=" + sb);
 		return sb.toString();
 	}
 
